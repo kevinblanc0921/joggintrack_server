@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: ramberri
+  password: ramberri
+  host: localhost
+  port: 5432
+
+development:
+ <<: *default
+ database: ramberri
+
+test:
+ <<: *default
+ database: 
+
+production:
+ <<: *default
+ database: 

@@ -1,0 +1,790 @@
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "kenny@swaniawskischiller.biz"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "1173033833"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "kenny@swaniawskischiller.biz"], ["encrypted_password", "$2a$04$xHu1rqpCwW8ZRW/c2bMJROi3MGdb9K8d/H0y0gYmWrF9bMjB.NMcG"], ["username", "anne"], ["created_at", "2019-04-08 10:31:21.340261"], ["updated_at", "2019-04-08 10:31:21.340261"], ["uid", "kenny@swaniawskischiller.biz"], ["tokens", "{}"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "kenny@swaniawskischiller.biz"], ["id", 1], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:21.400297"], ["tokens", "{\"UTSnY1y5v1IyJnaTx9AKdg\":{\"token\":\"$2a$10$2t5cQXxbsuhvIlRQNogqpuTZW6PBC2kL8KH.0qKco0P4DbXMyNPnq\",\"expiry\":1617877881,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:21.342-07:00\"}}"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:21 -0700
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "kenny@swaniawskischiller.biz"], ["LIMIT", 1]]
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_info.json.jbuilder (0.4ms)
+  Rendered api/v1/users/show.json.jbuilder (15.8ms)
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "kenny@swaniawskischiller.biz"], ["id", 1], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 22.4ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "bernita.corwin@shanahanwehner.net"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "6376301752"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "bernita.corwin@shanahanwehner.net"], ["encrypted_password", "$2a$04$NgOZ.dgf4CxXTkcPMf8vdON/1rgWWeH1AggqB7B7Tt7m.7e8ieBrC"], ["username", "mariah.lebsack"], ["created_at", "2019-04-08 10:31:21.507287"], ["updated_at", "2019-04-08 10:31:21.507287"], ["uid", "bernita.corwin@shanahanwehner.net"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "bernita.corwin@shanahanwehner.net"], ["id", 2], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:21.564674"], ["tokens", "{\"gjqIq3UGyQ1ukBLH8K-DtA\":{\"token\":\"$2a$10$I91VViTJmeXuCp/Gv2aKDOZVXCZP8yXHBbjozfmL0siyp.7ttlzzG\",\"expiry\":1617877881,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:21.508-07:00\"}}"], ["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:21 -0700
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "bernita.corwin@shanahanwehner.net"], ["LIMIT", 1]]
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_info.json.jbuilder (0.1ms)
+  Rendered api/v1/users/show.json.jbuilder (0.3ms)
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "bernita.corwin@shanahanwehner.net"], ["id", 2], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 0.6ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "carlee.wisozk@hoeger.name"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "1645615924"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "carlee.wisozk@hoeger.name"], ["encrypted_password", "$2a$04$jO6KWUgXMlE/N03wbXj6yuZ7l2B/okj19/o1P8UzLCx9hxHS6u4i6"], ["username", "kasey"], ["created_at", "2019-04-08 10:31:21.632486"], ["updated_at", "2019-04-08 10:31:21.632486"], ["uid", "carlee.wisozk@hoeger.name"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "d71f8c52cac9740800bccf9b817a20f49bdcadcc15ab53836120de2898974acf"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "d71f8c52cac9740800bccf9b817a20f49bdcadcc15ab53836120de2898974acf"], ["reset_password_sent_at", "2019-04-08 10:31:21.724441"], ["updated_at", "2019-04-08 10:31:21.725011"], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/users/password/edit?reset_password_token=[FILTERED]&redirect_url=http%3A%2F%2F127.0.0.1%3A3000" for 127.0.0.1 at 2019-04-08 03:31:21 -0700
+Processing by Api::V1::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]", "redirect_url"=>"http://127.0.0.1:3000"}
+Unpermitted parameter: :redirect_url
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "d71f8c52cac9740800bccf9b817a20f49bdcadcc15ab53836120de2898974acf"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "carlee.wisozk@hoeger.name"], ["id", 3], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "reset_password_token" = $2, "allow_password_change" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["tokens", "{\"ENcH5jDfLuTsnYNAyFK2zg\":{\"token\":\"$2a$10$SShZiHa/jKg707CjRvoxs.d8RoqZf7Kc/FAaiXRtp3WsJAAumyFXO\",\"expiry\":1617877881}}"], ["reset_password_token", "o9U_1UifozQLXTyS3Csg"], ["allow_password_change", true], ["updated_at", "2019-04-08 10:31:21.792093"], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:3000?access-token=wfnjkfN0kRvmpu5NnK6oCQ&client=ENcH5jDfLuTsnYNAyFK2zg&client_id=ENcH5jDfLuTsnYNAyFK2zg&config=&expiry=1617877881&reset_password=true&token=wfnjkfN0kRvmpu5NnK6oCQ&uid=carlee.wisozk%40hoeger.name
+Completed 302 Found in 59ms (ActiveRecord: 1.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:21 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$04$Udm/EqvSM5fwAfjTzeFGpOFigXH2vRIdn5KVS0o36k7r1wjUNHmhy"], ["first_name", "Johnny"], ["last_name", "Perez"], ["username", "test"], ["created_at", "2019-04-08 10:31:21.827528"], ["updated_at", "2019-04-08 10:31:21.827528"], ["uid", "test@test.com"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "test@test.com"], ["id", 4], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:21.885030"], ["tokens", "{\"cEsqO-FJJzn5a4QVtPXyjw\":{\"token\":\"$2a$10$GBCARXjgRXEhJTgQZURV8.pHyNxdEw6ZyAA6A1psVwk5Rffi3UPFa\",\"expiry\":1617877881}}"], ["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "test@test.com"], ["id", 4], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:21 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$04$M7LvHTH4U/GvPNH3EzwcTeT/90fBUoTwJZw9bD9E.F7Bmb8TiVm32"], ["first_name", "Johnny"], ["last_name", "Perez"], ["username", "test"], ["created_at", "2019-04-08 10:31:21.898356"], ["updated_at", "2019-04-08 10:31:21.898356"], ["uid", "test@test.com"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "test@test.com"], ["id", 5], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:21.955634"], ["tokens", "{\"T9_wTa3NeZUpf-opbnGEPA\":{\"token\":\"$2a$10$4YCPqBdg2wi.it0UHXO5yO.eKiZyV44rXQvgV5psASQG1vHBFC3N6\",\"expiry\":1617877881}}"], ["id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "test@test.com"], ["id", 5], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.3ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:21 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$04$cQQykv03WSinFv3RZesDpuAi9Xkz33PCgjxfeNoJrFf7VMA4BgRY2"], ["first_name", "Johnny"], ["last_name", "Perez"], ["username", "test"], ["created_at", "2019-04-08 10:31:21.968614"], ["updated_at", "2019-04-08 10:31:21.968614"], ["uid", "test@test.com"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "test@test.com"], ["id", 6], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:22.026213"], ["tokens", "{\"Jx5i4OAMG99VKkYOR6lnVQ\":{\"token\":\"$2a$10$98fCtMs74CVAo00Kxe6wPO1O6vYzN4Yeqtoy42GLha90kBppbxWt2\",\"expiry\":1617877881}}"], ["id", 6]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "test@test.com"], ["id", 6], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.3ms | ActiveRecord: 3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"invalid_email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"invalid_email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "invalid_email"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "invalid_email"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"invalid_email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"invalid_email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "invalid_email"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "invalid_email"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}, "registration"=>{"user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Johnny", "last_name"=>"Perez"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "amie@ankundingtorphy.org"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "2974701342"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "amie@ankundingtorphy.org"], ["encrypted_password", "$2a$04$SB65Nzxsklqsa2khhwVgkuUNwDq1SD0rMut//EUEeAil1eDnjM4yy"], ["username", "vicenta"], ["created_at", "2019-04-08 10:31:22.099470"], ["updated_at", "2019-04-08 10:31:22.099470"], ["uid", "amie@ankundingtorphy.org"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "amie@ankundingtorphy.org"], ["id", 7], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:22.156755"], ["tokens", "{\"kYuwfz3nNtowl3xfpVSm9g\":{\"token\":\"$2a$10$mM5dMRAClmI5ddURr8qpS.GF6RKb706H5kICLFqcIHTDtXGNebPTe\",\"expiry\":1617877882,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:22.100-07:00\"}}"], ["id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/user/profile" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::UsersController#profile as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "amie@ankundingtorphy.org"], ["LIMIT", 1]]
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_info.json.jbuilder (0.1ms)
+  Rendered api/v1/users/show.json.jbuilder (0.5ms)
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "amie@ankundingtorphy.org"], ["id", 7], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 1.1ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "susana.oconnell@oconnell.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "6892732258"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "susana.oconnell@oconnell.com"], ["encrypted_password", "$2a$04$HN9.5qsp8yrV.3PHjD6xQ.msIrKFaY4ZzLgRcB.Zt/t0jHrNYzdFO"], ["username", "sarina_mcclure"], ["created_at", "2019-04-08 10:31:22.226462"], ["updated_at", "2019-04-08 10:31:22.226462"], ["uid", "susana.oconnell@oconnell.com"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "susana.oconnell@oconnell.com"], ["id", 8], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:22.285893"], ["tokens", "{\"NYToyLpjNMNO296liRn6zw\":{\"token\":\"$2a$10$BmaBrJgDQ/3c2V9W6oYYd.zhamywRApJauuPMA4nuCaYXk9YpUZ3S\",\"expiry\":1617877882,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:22.228-07:00\"}}"], ["id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/user/profile" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::UsersController#profile as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "susana.oconnell@oconnell.com"], ["LIMIT", 1]]
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_info.json.jbuilder (0.1ms)
+  Rendered api/v1/users/show.json.jbuilder (0.5ms)
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "susana.oconnell@oconnell.com"], ["id", 8], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 1.2ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "fae@zulauflindgren.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "9940249116"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "fae@zulauflindgren.com"], ["encrypted_password", "$2a$04$D7QdcPR4pksxM5bU5IP4juBhYAlARs.ICJ2m1FUpmS1OfFvXsRik6"], ["username", "caleb.lebsack"], ["created_at", "2019-04-08 10:31:22.355596"], ["updated_at", "2019-04-08 10:31:22.355596"], ["uid", "fae@zulauflindgren.com"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "fae@zulauflindgren.com"], ["id", 9], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:22.414892"], ["tokens", "{\"ULcLDKEDLeSq6xKfJ6Nktg\":{\"token\":\"$2a$10$No20J9H6.VcsyNmsPQxkKO3aYF1.VDpXdRrRIeAEHb15qYzViBIwm\",\"expiry\":1617877882,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:22.357-07:00\"}}"], ["id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Started DELETE "/api/v1/users/sign_out" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "fae@zulauflindgren.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "fae@zulauflindgren.com"], ["id", 9], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{}"], ["updated_at", "2019-04-08 10:31:22.480773"], ["id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 59ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "price.bahringer@hudson.info"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "7966753623"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "price.bahringer@hudson.info"], ["encrypted_password", "$2a$04$fBbrWdzPT.fkJ1tXbnU3suEm7MfLt0ev6/AuJT2.Pc7auSztswHvG"], ["username", "laurence_kshlerin"], ["created_at", "2019-04-08 10:31:22.490143"], ["updated_at", "2019-04-08 10:31:22.490143"], ["uid", "price.bahringer@hudson.info"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "price.bahringer@hudson.info"], ["id", 10], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:22.549232"], ["tokens", "{\"8itO-o6wGTKgBgbgpnPKWw\":{\"token\":\"$2a$10$uhJ6N.nestRCtamdWjlcQehS8IidrYV0EQOLqYkDjQGP0nVQoTnqm\",\"expiry\":1617877882,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:22.491-07:00\"}}"], ["id", 10]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/api/v1/users/sign_out" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "price.bahringer@hudson.info"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "price.bahringer@hudson.info"], ["id", 10], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{}"], ["updated_at", "2019-04-08 10:31:22.609121"], ["id", 10]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 59ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started DELETE "/api/v1/users/sign_out" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "shanna.beer@jacobson.name"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "8563486491"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "shanna.beer@jacobson.name"], ["encrypted_password", "$2a$04$t5tIiIj8rTY.SI1yskWuO.ZGpfexkZWEB3uoG2DDKrudRhE/WfqNu"], ["username", "chadrick"], ["created_at", "2019-04-08 10:31:22.627249"], ["updated_at", "2019-04-08 10:31:22.627249"], ["uid", "shanna.beer@jacobson.name"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/sign_in" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"shanna.beer@jacobson.name", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"shanna.beer@jacobson.name", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'shanna.beer@jacobson.name' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "shanna.beer@jacobson.name"], ["id", 11], ["provider", "email"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "silas_marquardt@ziemann.net"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "9924340588"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "silas_marquardt@ziemann.net"], ["encrypted_password", "$2a$04$MLQYO79dM1cC9K6kq7U0zeHlZlZHED7BbADovLPojBKW2dYGBAurW"], ["username", "jaleel"], ["created_at", "2019-04-08 10:31:22.640629"], ["updated_at", "2019-04-08 10:31:22.640629"], ["uid", "silas_marquardt@ziemann.net"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/sign_in" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"silas_marquardt@ziemann.net", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"silas_marquardt@ziemann.net", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'silas_marquardt@ziemann.net' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "silas_marquardt@ziemann.net"], ["id", 12], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"YvNiYCavwFAkfQhnv7KsXg\":{\"token\":\"$2a$10$w4kQW3GB04UD39b7DWnoWefmIPr.GNC8mSXhhe/UeKlJw9N2S5m8K\",\"expiry\":1617877882}}"], ["updated_at", "2019-04-08 10:31:22.703530"], ["id", 12]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2019-04-08 10:31:22.705462"], ["last_sign_in_at", "2019-04-08 10:31:22.705462"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2019-04-08 10:31:22.706015"], ["id", 12]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "silas_marquardt@ziemann.net"], ["id", 12], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.3ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "boris@thompson.info"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "8850203139"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "boris@thompson.info"], ["encrypted_password", "$2a$04$Xpzx16v61Hv.nnZbo7..OeAKfcbc9bH8q7cNK1Kg/nj3LlyqEoUqq"], ["username", "aubree_ritchie"], ["created_at", "2019-04-08 10:31:22.717073"], ["updated_at", "2019-04-08 10:31:22.717073"], ["uid", "boris@thompson.info"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/sign_in" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"boris@thompson.info", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"boris@thompson.info", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'boris@thompson.info' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "boris@thompson.info"], ["id", 13], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"m7fYGVBFaw-qqmWCz8Or8Q\":{\"token\":\"$2a$10$3DLB2T/1nT6WGdS2qZ41z.8p.at66MG6K3DqzYb4rLLoUM2MRo4rK\",\"expiry\":1617877882}}"], ["updated_at", "2019-04-08 10:31:22.779021"], ["id", 13]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2019-04-08 10:31:22.780822"], ["last_sign_in_at", "2019-04-08 10:31:22.780822"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2019-04-08 10:31:22.781391"], ["id", 13]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "boris@thompson.info"], ["id", 13], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "katherine@haucknitzsche.co"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "3053706981"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "katherine@haucknitzsche.co"], ["encrypted_password", "$2a$04$mWR66VUB997Gxzt8WCful.fmaaFxSVio14X4xK0y6eqEepRd6UWiC"], ["username", "maye_dickinson"], ["created_at", "2019-04-08 10:31:22.845553"], ["updated_at", "2019-04-08 10:31:22.845553"], ["uid", "katherine@haucknitzsche.co"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/sign_in" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"katherine@haucknitzsche.co", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"katherine@haucknitzsche.co", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'katherine@haucknitzsche.co' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "katherine@haucknitzsche.co"], ["id", 14], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"IX1KHiheXmANMgjbe9wjLg\":{\"token\":\"$2a$10$MlGiTDRaT136VluT/ZgN6eAseleVNKyLV63Pl/9j8BO.1sIJTKl9q\",\"expiry\":1617877882}}"], ["updated_at", "2019-04-08 10:31:22.907718"], ["id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2019-04-08 10:31:22.909434"], ["last_sign_in_at", "2019-04-08 10:31:22.909434"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2019-04-08 10:31:22.909901"], ["id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "katherine@haucknitzsche.co"], ["id", 14], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "juana@prohaska.name"], ["encrypted_password", "$2a$04$GfUQBDvKUQgnZtSqdRDS5.ZxIHLs9TXmUCiA7v/.72w5yKmcz4I.2"], ["username", "ursula"], ["created_at", "2019-04-08 10:31:22.925970"], ["updated_at", "2019-04-08 10:31:22.925970"], ["uid", "juana@prohaska.name"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "juana@prohaska.name"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "juana@prohaska.name"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "juana@prohaska.name"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "JUANA@PROHASKA.NAME"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "juana@prohaska.name"], ["provider", "emaim"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "lane_mann@jastkuhn.info"], ["encrypted_password", "$2a$04$uw22x.NZFly9TzSETXjNBeK9ttbQ8wfpFUurCB//sov17hzhjrv3S"], ["username", "susanna.pfannerstill"], ["created_at", "2019-04-08 10:31:22.945062"], ["updated_at", "2019-04-08 10:31:22.945062"], ["uid", "lane_mann@jastkuhn.info"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "lane_mann@jastkuhn.info"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "lane_mann@jastkuhn.info"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "lane_mann@jastkuhn.info"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "lane_mann@jastkuhn.info"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "lane_mann@jastkuhn.info"], ["provider", "emaim"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL AND "users"."provider" = $1 LIMIT $2[0m  [["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "9795589311"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "myrtis.moriette@fadeldenesik.info"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "1179240993"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "myrtis.moriette@fadeldenesik.info"], ["encrypted_password", "$2a$04$bMzVaASawTaMdQardo3Yl.d35m2OVpsikgj8H1ZqK/EaeTm.0bhjC"], ["username", "shawn"], ["created_at", "2019-04-08 10:31:22.966982"], ["updated_at", "2019-04-08 10:31:22.966982"], ["uid", "myrtis.moriette@fadeldenesik.info"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "virgie@doyle.biz"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "4121834682"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "virgie@doyle.biz"], ["encrypted_password", "$2a$04$/Qijwg9mOBNn2Qs5jsFQfurLjzM6E6S3vT.sz2JhhKNZw9tLe4I6W"], ["username", "miguel"], ["created_at", "2019-04-08 10:31:22.976735"], ["updated_at", "2019-04-08 10:31:22.976735"], ["uid", "virgie@doyle.biz"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/password" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::PasswordsController#create as JSON
+  Parameters: {"email"=>"notvalid@example.com", "password"=>{"email"=>"notvalid@example.com"}}
+Unpermitted parameter: :password
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (uid = 'notvalid@example.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "estella@okeefewillms.io"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "2374142511"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "estella@okeefewillms.io"], ["encrypted_password", "$2a$04$h47xCcYOZl6KaRMxMWQYXecr8ptzYszHK.1TJrvsZ.ojHrZ9bLQTu"], ["username", "roman"], ["created_at", "2019-04-08 10:31:22.993122"], ["updated_at", "2019-04-08 10:31:22.993122"], ["uid", "estella@okeefewillms.io"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/password" for 127.0.0.1 at 2019-04-08 03:31:22 -0700
+Processing by Api::V1::PasswordsController#create as JSON
+  Parameters: {"email"=>"notvalid@example.com", "password"=>{"email"=>"notvalid@example.com"}}
+Unpermitted parameter: :password
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (uid = 'notvalid@example.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "reese_runolfsdottir@gorczanylesch.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "8766937873"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "reese_runolfsdottir@gorczanylesch.com"], ["encrypted_password", "$2a$04$.RIsxQRZYDqxuSIvp/OZ6e5uHLo/WBRsnmOR7FBBVg3Jqa/022dFW"], ["username", "lulu"], ["created_at", "2019-04-08 10:31:23.004616"], ["updated_at", "2019-04-08 10:31:23.004616"], ["uid", "reese_runolfsdottir@gorczanylesch.com"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/password" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::PasswordsController#create as JSON
+  Parameters: {"email"=>"reese_runolfsdottir@gorczanylesch.com", "password"=>{"email"=>"reese_runolfsdottir@gorczanylesch.com"}}
+Unpermitted parameter: :password
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (uid = 'reese_runolfsdottir@gorczanylesch.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "00093539f67cf44341a11c983368bda3ebaeb53bdbf9d396259e17e5c50b9ba5"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "00093539f67cf44341a11c983368bda3ebaeb53bdbf9d396259e17e5c50b9ba5"], ["reset_password_sent_at", "2019-04-08 10:31:23.010255"], ["updated_at", "2019-04-08 10:31:23.010773"], ["id", 20]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering /Users/ramberri/.rvm/gems/ruby-2.4.1/gems/devise_token_auth-0.1.43/app/views/devise/mailer/reset_password_instructions.html.erb
+  Rendered /Users/ramberri/.rvm/gems/ruby-2.4.1/gems/devise_token_auth-0.1.43/app/views/devise/mailer/reset_password_instructions.html.erb (18.4ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 323.1ms
+Sent mail to reese_runolfsdottir@gorczanylesch.com (9.1ms)
+Date: Mon, 08 Apr 2019 03:31:23 -0700
+From: no-reply@api.com
+Reply-To: no-reply@yourapi.com
+To: reese_runolfsdottir@gorczanylesch.com
+Message-ID: <5cab22fb5671a_253a3fcf284417b82454e@Rambers-Mac.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+email: reese_runolfsdottir@gorczanylesch.com
+provider: email
+redirect-url: http://127.0.0.1:3000
+client-config: default
+
+<p>Hello reese_runolfsdottir@gorczanylesch.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/api/v1/users/password/edit?config=default&redirect_url=http%3A%2F%2F127.0.0.1%3A3000&reset_password_token=ajC4SKsi7GDoTLaeN5gJ">Change my password</a></p>
+
+<p>If you didn&#39;t request this, please ignore this email.</p>
+<p>Your password won&#39;t change until you access the link above and create a new one.</p>
+Completed 200 OK in 350ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "abe@hoppeconsidine.info"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "5676838670"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "abe@hoppeconsidine.info"], ["encrypted_password", "$2a$04$VTqBwGKgFhDwaHJPGSive.G7BaZbCxa7x2jio2CSZRhg/EqzMpE6e"], ["username", "archibald"], ["created_at", "2019-04-08 10:31:23.365091"], ["updated_at", "2019-04-08 10:31:23.365091"], ["uid", "abe@hoppeconsidine.info"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/password" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::PasswordsController#create as JSON
+  Parameters: {"email"=>"abe@hoppeconsidine.info", "password"=>{"email"=>"abe@hoppeconsidine.info"}}
+Unpermitted parameter: :password
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (uid = 'abe@hoppeconsidine.info' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "912064edbac93599b38491e26e67b5847fb079596ce197f9e5aafef3eecccfca"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "912064edbac93599b38491e26e67b5847fb079596ce197f9e5aafef3eecccfca"], ["reset_password_sent_at", "2019-04-08 10:31:23.370608"], ["updated_at", "2019-04-08 10:31:23.371110"], ["id", 21]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering /Users/ramberri/.rvm/gems/ruby-2.4.1/gems/devise_token_auth-0.1.43/app/views/devise/mailer/reset_password_instructions.html.erb
+  Rendered /Users/ramberri/.rvm/gems/ruby-2.4.1/gems/devise_token_auth-0.1.43/app/views/devise/mailer/reset_password_instructions.html.erb (0.5ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 1.6ms
+Sent mail to abe@hoppeconsidine.info (1.7ms)
+Date: Mon, 08 Apr 2019 03:31:23 -0700
+From: no-reply@api.com
+Reply-To: no-reply@yourapi.com
+To: abe@hoppeconsidine.info
+Message-ID: <5cab22fb5b9c9_253a3fcf284417b824680@Rambers-Mac.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+email: abe@hoppeconsidine.info
+provider: email
+redirect-url: http://127.0.0.1:3000
+client-config: default
+
+<p>Hello abe@hoppeconsidine.info!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/api/v1/users/password/edit?config=default&redirect_url=http%3A%2F%2F127.0.0.1%3A3000&reset_password_token=qgEsSZcoW5qJz8vEq7Fx">Change my password</a></p>
+
+<p>If you didn&#39;t request this, please ignore this email.</p>
+<p>Your password won&#39;t change until you access the link above and create a new one.</p>
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "astrid@hahn.org"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "2277438818"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "astrid@hahn.org"], ["encrypted_password", "$2a$04$EkucL802cJld0y2apT.vYOtH6PzQgYtwhQH5lI9Xd8r5Cz5Uhvvsi"], ["username", "cielo_hagenes"], ["created_at", "2019-04-08 10:31:23.384069"], ["updated_at", "2019-04-08 10:31:23.384069"], ["uid", "astrid@hahn.org"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/users/password" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::PasswordsController#create as JSON
+  Parameters: {"email"=>"astrid@hahn.org", "password"=>{"email"=>"astrid@hahn.org"}}
+Unpermitted parameter: :password
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (uid = 'astrid@hahn.org' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "70a77a86b1cc55820157ad1d40983cfc67aca9954666b56364b053afa3199fdb"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "70a77a86b1cc55820157ad1d40983cfc67aca9954666b56364b053afa3199fdb"], ["reset_password_sent_at", "2019-04-08 10:31:23.389438"], ["updated_at", "2019-04-08 10:31:23.389937"], ["id", 22]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering /Users/ramberri/.rvm/gems/ruby-2.4.1/gems/devise_token_auth-0.1.43/app/views/devise/mailer/reset_password_instructions.html.erb
+  Rendered /Users/ramberri/.rvm/gems/ruby-2.4.1/gems/devise_token_auth-0.1.43/app/views/devise/mailer/reset_password_instructions.html.erb (0.5ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 1.7ms
+Sent mail to astrid@hahn.org (1.8ms)
+Date: Mon, 08 Apr 2019 03:31:23 -0700
+From: no-reply@api.com
+Reply-To: no-reply@yourapi.com
+To: astrid@hahn.org
+Message-ID: <5cab22fb60325_253a3fcf284417b8247c6@Rambers-Mac.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+email: astrid@hahn.org
+provider: email
+redirect-url: http://127.0.0.1:3000
+client-config: default
+
+<p>Hello astrid@hahn.org!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/api/v1/users/password/edit?config=default&redirect_url=http%3A%2F%2F127.0.0.1%3A3000&reset_password_token=-riTtq8ditRyx4rHE3Kb">Change my password</a></p>
+
+<p>If you didn&#39;t request this, please ignore this email.</p>
+<p>Your password won&#39;t change until you access the link above and create a new one.</p>
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "georgianna.leuschke@gerholdkoelpin.co"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "4114511959"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "georgianna.leuschke@gerholdkoelpin.co"], ["encrypted_password", "$2a$04$YiUZBX/yEi6xB6.8oquBy.3Fq9STdPoexqAp1mVz6EFrRhQG2GUZO"], ["username", "eleanora.mitchell"], ["created_at", "2019-04-08 10:31:23.402081"], ["updated_at", "2019-04-08 10:31:23.402081"], ["uid", "georgianna.leuschke@gerholdkoelpin.co"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "7a63fa2a5d4837a758070c6ac3ec445dd1f2402ac0c82247e60addbd87bf7f79"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "7a63fa2a5d4837a758070c6ac3ec445dd1f2402ac0c82247e60addbd87bf7f79"], ["reset_password_sent_at", "2019-04-08 10:31:23.404413"], ["updated_at", "2019-04-08 10:31:23.404862"], ["id", 23]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "georgianna.leuschke@gerholdkoelpin.co"], ["id", 23], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:23.462646"], ["tokens", "{\"w7ZifqGDKbyautLEUmQTcA\":{\"token\":\"$2a$10$LVELtAHmmzxBwRbDSNI.4OYmzaTPqk2QOui4LnichgfPkDQYR7bza\",\"expiry\":1617877883,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:23.406-07:00\"}}"], ["id", 23]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/users/password/edit?reset_password_token=[FILTERED]&redirect_url=http%3A%2F%2F127.0.0.1%3A3000" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]", "redirect_url"=>"http://127.0.0.1:3000"}
+Unpermitted parameter: :redirect_url
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "7a63fa2a5d4837a758070c6ac3ec445dd1f2402ac0c82247e60addbd87bf7f79"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "georgianna.leuschke@gerholdkoelpin.co"], ["id", 23], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "reset_password_token" = $2, "allow_password_change" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["tokens", "{\"w7ZifqGDKbyautLEUmQTcA\":{\"token\":\"$2a$10$LVELtAHmmzxBwRbDSNI.4OYmzaTPqk2QOui4LnichgfPkDQYR7bza\",\"expiry\":1617877883,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:23.406-07:00\"},\"Nz85fFut2itzOCaGmSkpZA\":{\"token\":\"$2a$10$.M7/LM57Yl.9RqLhA5Dv6eIRwlAH8t99ic65wC5FWg1AztSplG2xC\",\"expiry\":1617877883}}"], ["reset_password_token", "g2NaG5ZxXs2pUUDyvNs2"], ["allow_password_change", true], ["updated_at", "2019-04-08 10:31:23.521863"], ["id", 23]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:3000?access-token=Dw_4NplO_1lv4m15WjFCRw&client=Nz85fFut2itzOCaGmSkpZA&client_id=Nz85fFut2itzOCaGmSkpZA&config=&expiry=1617877883&reset_password=true&token=Dw_4NplO_1lv4m15WjFCRw&uid=georgianna.leuschke%40gerholdkoelpin.co
+Completed 302 Found in 58ms (ActiveRecord: 1.7ms)
+Started PUT "/api/v1/users/password" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::PasswordsController#update as JSON
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "georgianna.leuschke@gerholdkoelpin.co"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "georgianna.leuschke@gerholdkoelpin.co"], ["id", 23], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "georgianna.leuschke@gerholdkoelpin.co"], ["id", 23], ["provider", "email"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 62ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "martine.stracke@morar.co"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "9685985070"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "martine.stracke@morar.co"], ["encrypted_password", "$2a$04$Ys33YpjU8TZJOIoRGXBzxO4/zEmt9HXyZj4t1uCkuPc6qQRx9XnLO"], ["username", "mateo.hickle"], ["created_at", "2019-04-08 10:31:23.593435"], ["updated_at", "2019-04-08 10:31:23.593435"], ["uid", "martine.stracke@morar.co"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "13d9561aa7b1b4fd3e127b89343809c534c6c79c30a756635126abbe34af8098"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "13d9561aa7b1b4fd3e127b89343809c534c6c79c30a756635126abbe34af8098"], ["reset_password_sent_at", "2019-04-08 10:31:23.595689"], ["updated_at", "2019-04-08 10:31:23.596173"], ["id", 24]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "martine.stracke@morar.co"], ["id", 24], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:23.655351"], ["tokens", "{\"bLlPT2v4Lb2eXeIt3bKJjA\":{\"token\":\"$2a$10$946Xcp.9WgaBkBLvz0dzD.bftkk7IUAxu5RSLg/y2Mb4RiyIpENJy\",\"expiry\":1617877883,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:23.597-07:00\"}}"], ["id", 24]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/users/password/edit?reset_password_token=[FILTERED]&redirect_url=http%3A%2F%2F127.0.0.1%3A3000" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]", "redirect_url"=>"http://127.0.0.1:3000"}
+Unpermitted parameter: :redirect_url
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "13d9561aa7b1b4fd3e127b89343809c534c6c79c30a756635126abbe34af8098"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "martine.stracke@morar.co"], ["id", 24], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "reset_password_token" = $2, "allow_password_change" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["tokens", "{\"bLlPT2v4Lb2eXeIt3bKJjA\":{\"token\":\"$2a$10$946Xcp.9WgaBkBLvz0dzD.bftkk7IUAxu5RSLg/y2Mb4RiyIpENJy\",\"expiry\":1617877883,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:23.597-07:00\"},\"DZ_LcCfyJnXKypza8y-nyw\":{\"token\":\"$2a$10$idrLIvA5JzyhbmQ85R8GVuw2jiX8560t4uB5RHNTz2xFuBSqPdCoK\",\"expiry\":1617877883}}"], ["reset_password_token", "Vqexr2rFsTgfgZbF1PUW"], ["allow_password_change", true], ["updated_at", "2019-04-08 10:31:23.717342"], ["id", 24]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:3000?access-token=JOvCX49aYm_Rb47oWxv2Sw&client=DZ_LcCfyJnXKypza8y-nyw&client_id=DZ_LcCfyJnXKypza8y-nyw&config=&expiry=1617877883&reset_password=true&token=JOvCX49aYm_Rb47oWxv2Sw&uid=martine.stracke%40morar.co
+Completed 302 Found in 61ms (ActiveRecord: 1.9ms)
+Started PUT "/api/v1/users/password" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::PasswordsController#update as JSON
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "martine.stracke@morar.co"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "martine.stracke@morar.co"], ["id", 24], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = $1, "reset_password_token" = $2, "reset_password_sent_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["encrypted_password", "$2a$04$6f0B3lqGNWV1zuD6B2sAAOXUIw5Vnkgw4vOm5md1SnvHAU/toZDsC"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["updated_at", "2019-04-08 10:31:23.780259"], ["id", 24]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "martine.stracke@morar.co"], ["id", 24], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "allow_password_change" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["allow_password_change", false], ["updated_at", "2019-04-08 10:31:23.783338"], ["id", 24]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "martine.stracke@morar.co"], ["id", 24], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "frederique@runolfon.co"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "6703720369"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "frederique@runolfon.co"], ["encrypted_password", "$2a$04$HWZWonMyOOLuUCxepbIQs..zMk6i347f9uraDVgYlIxN7KfQqZ7xC"], ["username", "devonte"], ["created_at", "2019-04-08 10:31:23.793543"], ["updated_at", "2019-04-08 10:31:23.793543"], ["uid", "frederique@runolfon.co"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "frederique@runolfon.co"], ["id", 25], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:23.851151"], ["tokens", "{\"4RfGNMj5J7VVFdJHj8fqRw\":{\"token\":\"$2a$10$SiO.8Sp5PdQ9chXctKYcSugIwsbeXzOfcRXTUVLJqdVCzLgm2ZoAq\",\"expiry\":1617877883,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:23.794-07:00\"}}"], ["id", 25]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"username"=>"new username"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "frederique@runolfon.co"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "frederique@runolfon.co"], ["id", 25], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "username" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["username", "new username"], ["updated_at", "2019-04-08 10:31:23.911621"], ["id", 25]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_info.json.jbuilder (0.1ms)
+  Rendered api/v1/users/show.json.jbuilder (0.3ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "frederique@runolfon.co"], ["id", 25], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 0.7ms | ActiveRecord: 2.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "jasper.muller@boehm.org"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "7012584962"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jasper.muller@boehm.org"], ["encrypted_password", "$2a$04$C1e1fgi2KG0rZRue5OVeiOZgubEZxmSvhuqVmrw41jn3cr04QVDea"], ["username", "alayna_rippin"], ["created_at", "2019-04-08 10:31:23.921919"], ["updated_at", "2019-04-08 10:31:23.921919"], ["uid", "jasper.muller@boehm.org"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "jasper.muller@boehm.org"], ["id", 26], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:23.982254"], ["tokens", "{\"Zz9DUB56dlVX8D2eameU7g\":{\"token\":\"$2a$10$gmpVmUs1K7gWuOJ3XJOvyesXpNAiktXoDH3L9QjX5ach2HPryFsNm\",\"expiry\":1617877883,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:23.923-07:00\"}}"], ["id", 26]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:23 -0700
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"username"=>"new username"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "jasper.muller@boehm.org"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "jasper.muller@boehm.org"], ["id", 26], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "username" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["username", "new username"], ["updated_at", "2019-04-08 10:31:24.044037"], ["id", 26]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_info.json.jbuilder (0.1ms)
+  Rendered api/v1/users/show.json.jbuilder (0.3ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "jasper.muller@boehm.org"], ["id", 26], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 0.6ms | ActiveRecord: 2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "chanel.hoeger@pollich.biz"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "7615825121"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "chanel.hoeger@pollich.biz"], ["encrypted_password", "$2a$04$eR9fvJtkr1iNqCxqmZCIaO6lVdWqJF7zprsGAyYQhWbTDajsUHflm"], ["username", "jenifer.moen"], ["created_at", "2019-04-08 10:31:24.056874"], ["updated_at", "2019-04-08 10:31:24.056874"], ["uid", "chanel.hoeger@pollich.biz"], ["tokens", "{}"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "chanel.hoeger@pollich.biz"], ["id", 27], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:24.114932"], ["tokens", "{\"EA0Fz2T8B83MzftQUdqh1A\":{\"token\":\"$2a$10$AN10voIf/W4tR5GX4p23/udCqbmdI8z15/T2e8R9eVB3qbVvGZVuq\",\"expiry\":1617877884,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:24.059-07:00\"}}"], ["id", 27]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:24 -0700
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"username"=>"new username"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "chanel.hoeger@pollich.biz"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "chanel.hoeger@pollich.biz"], ["id", 27], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "username" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["username", "new username"], ["updated_at", "2019-04-08 10:31:24.173649"], ["id", 27]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_info.json.jbuilder (0.1ms)
+  Rendered api/v1/users/show.json.jbuilder (0.3ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "chanel.hoeger@pollich.biz"], ["id", 27], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 0.7ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "harry@kirlin.name"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "9624437209"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "harry@kirlin.name"], ["encrypted_password", "$2a$04$RwcVY.tfUk981llSKDeOh.is8FlGHngpSGiO/VLq.x6oUGgTOJ/eq"], ["username", "aditya"], ["created_at", "2019-04-08 10:31:24.184067"], ["updated_at", "2019-04-08 10:31:24.184067"], ["uid", "harry@kirlin.name"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "harry@kirlin.name"], ["id", 28], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:24.240433"], ["tokens", "{\"2FV1gPgWPzn7rM0aqv245w\":{\"token\":\"$2a$10$4NrJ.kTnJ1VBSSx/X/TFJ.HE5r3Wo9QyoNOqqCBa/NPd.36TSsTb2\",\"expiry\":1617877884,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:24.185-07:00\"}}"], ["id", 28]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:24 -0700
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"notanemail"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "harry@kirlin.name"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "harry@kirlin.name"], ["id", 28], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Validation failed: Email is not an email
+Completed 400 Bad Request in 58ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "frieda@heathcote.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "3047117996"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "frieda@heathcote.com"], ["encrypted_password", "$2a$04$hrClG16vdaaumW/F8NG/suyD0okvqmaYv7Vin9xzUwP75mOTFWzFG"], ["username", "nikolas_huel"], ["created_at", "2019-04-08 10:31:24.307249"], ["updated_at", "2019-04-08 10:31:24.307249"], ["uid", "frieda@heathcote.com"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "frieda@heathcote.com"], ["id", 29], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:24.364678"], ["tokens", "{\"uz8VhZJTsqmPrN-eLrqPfQ\":{\"token\":\"$2a$10$1JwhvguegMjhsVVFENIpRuF2.gQajfuhH1BcSzKr46MKEElVdD1ba\",\"expiry\":1617877884,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:24.308-07:00\"}}"], ["id", 29]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:24 -0700
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"notanemail"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "frieda@heathcote.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "frieda@heathcote.com"], ["id", 29], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Validation failed: Email is not an email
+Completed 400 Bad Request in 59ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "maybelle@gutkowskifay.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "2329800816"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "maybelle@gutkowskifay.com"], ["encrypted_password", "$2a$04$bKTUUA2jwXRqrHbR3od6LeMZXwMXGyWeAU3XBIG0QsG9dqhwRl6iO"], ["username", "bernice.gottlieb"], ["created_at", "2019-04-08 10:31:24.432071"], ["updated_at", "2019-04-08 10:31:24.432071"], ["uid", "maybelle@gutkowskifay.com"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "maybelle@gutkowskifay.com"], ["id", 30], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:24.489775"], ["tokens", "{\"pbH70JpOigj3Yt9MMMRETw\":{\"token\":\"$2a$10$H1EAB8vmFKFHjSiFfA4Il.pi8S6ElGKQG6sB.mk1NXUMGAf1HQ7tC\",\"expiry\":1617877884,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:24.433-07:00\"}}"], ["id", 30]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:24 -0700
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"notanemail"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "maybelle@gutkowskifay.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "maybelle@gutkowskifay.com"], ["id", 30], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Validation failed: Email is not an email
+Completed 400 Bad Request in 59ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "karolann@macgyver.io"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["uid", "4422872691"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at", "uid", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "karolann@macgyver.io"], ["encrypted_password", "$2a$04$XfRtSbWax.DKBdfA3kOo6.Rk5reXQHzeHpU.dUGAYyFm0ymjybrYW"], ["username", "chris"], ["created_at", "2019-04-08 10:31:24.558846"], ["updated_at", "2019-04-08 10:31:24.558846"], ["uid", "karolann@macgyver.io"], ["tokens", "{}"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."uid" = $1 AND "users"."id" != $2 AND "users"."provider" = $3 LIMIT $4[0m  [["uid", "karolann@macgyver.io"], ["id", 31], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "tokens" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2019-04-08 10:31:24.616005"], ["tokens", "{\"j3yNq_KQF-U_q8d04UiWjg\":{\"token\":\"$2a$10$RO7xBMaYhnsWw6kGOQ4uEewt8afSF2o7ScDn5mrlmfwnXSysCpx5O\",\"expiry\":1617877884,\"last_token\":null,\"updated_at\":\"2019-04-08T03:31:24.560-07:00\"}}"], ["id", 31]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/user" for 127.0.0.1 at 2019-04-08 03:31:24 -0700
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "karolann@macgyver.io"], ["LIMIT", 1]]
+param is missing or the value is empty: user
+Completed 422 Unprocessable Entity in 56ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
