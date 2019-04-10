@@ -44,19 +44,15 @@ class RecordsController < ApplicationController
     end
 
     def filtered_by_date
-        from = record_filter_params[:from]
-        to = record_filter_params[:to]
+        from = params[:from]
+        to = params[:to]
 
-        @record = Record.having_dob_between(from, to)
-        render :json => @record
+        @records = Record.where("date between (?) and (?)", from, to)
+        render :json => @records
     end
 
     private
     def record_params
         params.permit(:distance, :time, :date, :user)
-    end
-
-    def record_filter_params
-        params.permit(:from, :to)
     end
 end
